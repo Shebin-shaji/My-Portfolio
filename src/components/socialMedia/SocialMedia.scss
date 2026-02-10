@@ -1,90 +1,104 @@
 @import "../../_globalColor";
 
 .social-media-div {
-  font-size: 2em;
+  font-size: 1.5em;
+  /* Slightly reduce size to accommodate text */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* Align left or center depending on context, keeping default flow */
+  gap: 10px;
 }
 
 .icon-button {
   margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 2.6rem;
+  /* Match previous icon size as radius */
+  padding: 0 15px 0 5px;
+  /* Use padding to create space for text */
+  height: 2.6rem;
+  line-height: 2.6rem;
+  color: white;
+  /* Text color */
+  transition: 0.2s ease-in;
+  font-size: 1rem;
+  /* Adjust text size */
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .icon-button i {
-  color: $textColorDark;
-  border-radius: 2.6rem;
-  cursor: pointer;
+  color: white;
+  /* Icon color inside button */
+  border-radius: 50%;
   display: inline-block;
   font-size: 1.3rem;
   height: 2.6rem;
   line-height: 2.6rem;
-  margin: 0 5px;
-  position: relative;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   width: 2.6rem;
-  margin-bottom: 10px;
-  transition: 0.2s ease-in;
+  text-align: center;
+  margin-right: 2px;
+  /* Space between icon and text */
 }
 
-.facebook i {
+
+
+/* Background Colors for Buttons */
+.facebook {
   background-color: $faceBook;
 }
 
-.linkedin i {
+.linkedin {
   background-color: $linkedin;
 }
 
-.github i {
+.github {
   background-color: $github;
 }
 
-.gitlab i {
+.gitlab {
   background-color: $gitlab;
 }
 
-.google i {
+.google {
   background-color: $google;
 }
 
-.twitter i {
+.twitter {
   background-color: $twitter;
 }
 
-.medium i {
+.medium {
   background-color: $medium;
 }
 
-.stack-overflow i {
+.stack-overflow {
   background-color: $stackoverflow;
 }
 
-.kaggle i {
+.kaggle {
   background-color: $kaggle;
 }
 
-.instagram i {
+.instagram {
   background-color: $instagram;
 }
 
-/* Hover Transition */
-.twitter i:hover,
-.google i:hover,
-.gitlab i:hover,
-.github i:hover,
-.linkedin i:hover,
-.facebook i:hover,
-.instagram i:hover,
-.stack-overflow i:hover,
-.kaggle i:hover,
-.medium i:hover {
+/* Hover Transition - Darken or lighten on hover */
+.icon-button:hover {
   background-color: $textColor;
+  /* Using primary color on hover like before */
+  color: white;
 }
 
 /* Media Query */
 @media (max-width: 768px) {
   .social-media-div {
-    text-align: center;
+    justify-content: center;
+    /* Center on mobile */
   }
 }
