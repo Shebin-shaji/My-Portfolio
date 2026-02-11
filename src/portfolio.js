@@ -33,7 +33,7 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
+  github: "https://github.com/Shebin-shaji",
   linkedin: "https://www.linkedin.com/in/shebin-shaji-1a132824b/",
   gmail: "shebinshaji2615@gmail.com",
   // gitlab: "https://github.com/Shebin-shaji",
@@ -65,61 +65,103 @@ const skillsSection = {
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
     {
-      skillName: "html-5",
+      skillName: "Flutter",
+      fontAwesomeClassname: "fas fa-mobile-alt"
+    },
+    {
+      skillName: "Dart",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "Android",
+      fontAwesomeClassname: "fab fa-android"
+    },
+    {
+      skillName: "REST APIs",
+      fontAwesomeClassname: "fas fa-plug"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
+    },
+    {
+      skillName: "GitHub",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "Google Play Store",
+      fontAwesomeClassname: "fab fa-google-play"
+    },
+    {
+      skillName: "Figma",
+      fontAwesomeClassname: "fab fa-figma"
+    },
+    {
+      skillName: "HTML",
       fontAwesomeClassname: "fab fa-html5"
     },
     {
-      skillName: "css3",
+      skillName: "CSS",
       fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
     }
   ],
+
+  // softwareSkills: [
+  //   {
+  //     skillName: "html-5",
+  //        fontAwesomeClassname: "fab fa-html5"
+  //   },
+  //   {
+  //     skillName: "css3",
+  //     fontAwesomeClassname: "fab fa-css3-alt"
+  //   },
+  //   {
+  //     skillName: "sass",
+  //     fontAwesomeClassname: "fab fa-sass"
+  //   },
+  //   {
+  //     skillName: "JavaScript",
+  //     fontAwesomeClassname: "fab fa-js"
+  //   },
+  //   {
+  //     skillName: "reactjs",
+  //     fontAwesomeClassname: "fab fa-react"
+  //   },
+  //   {
+  //     skillName: "nodejs",
+  //     fontAwesomeClassname: "fab fa-node"
+  //   },
+  //   {
+  //     skillName: "swift",
+  //     fontAwesomeClassname: "fab fa-swift"
+  //   },
+  //   {
+  //     skillName: "npm",
+  //     fontAwesomeClassname: "fab fa-npm"
+  //   },
+  //   {
+  //     skillName: "sql-database",
+  //     fontAwesomeClassname: "fas fa-database"
+  //   },
+  //   {
+  //     skillName: "aws",
+  //     fontAwesomeClassname: "fab fa-aws"
+  //   },
+  //   {
+  //     skillName: "firebase",
+  //     fontAwesomeClassname: "fas fa-fire"
+  //   },
+  //   {
+  //     skillName: "python",
+  //     fontAwesomeClassname: "fab fa-python"
+  //   },
+  //   {
+  //     skillName: "docker",
+  //     fontAwesomeClassname: "fab fa-docker"
+  //   }
+  // ],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -129,24 +171,20 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "Banglore North University",
+      logo: require("./assets/images/Bengaluru_North_University_logo.png"),
+      subHeader: "Bachelor of Computer Application",
+      duration: "September 2020 - September 2023",
+      desc: "Completed Bachelor's program focusing on core computer science fundamentals and programming skills.",
+
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
-    }
+      schoolName: "Mount Bethany Public School CBSE",
+      logo: require("./assets/images/1000258819.jpg"),
+      subHeader: "Higher Secondary  ",
+      duration: "2018 - 2020",
+      desc: "Completed secondary and higher secondary education with focus on foundational academic skills.",
+    },
   ]
 };
 
@@ -172,31 +210,35 @@ const techStack = {
 };
 
 // Work experience section
-
+//
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Flutter Developer",
+      company: "Cure and Care Private Limited",
+      companylogo: require("./assets/images/rcurelogo.jpg"),
+      date: "Sep 2024 – Present",
+      desc: "Working as a Flutter Developer building and maintaining production-grade mobile applications with a focus on performance, scalability, and clean architecture.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Built and released Flutter applications to the Google Play Store, handling end-to-end deployment and release cycles",
+        "Implemented scalable architecture using BLoC, Provider, MVVM, and Clean Architecture principles"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-
+      role: "Flutter Developer Intern",
+      company: "Luminar Technolab",
+      companylogo: require("./assets/images/luminar.jpg"),
+      date: "Jan 2024 – Jul 2024",
+      desc: "Completed a Flutter development internship focused on building cross-platform applications, strengthening fundamentals, and following structured coding practices.",
+      descBullets: [
+        "Learned Flutter and Dart for building cross-platform mobile applications",
+        "Worked with REST APIs and state management using Provider and BLoC"
+      ]
+    }
   ]
 };
+
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
