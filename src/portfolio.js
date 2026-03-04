@@ -252,34 +252,62 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "Some startups and companies that I helped to create their tech",
+  display: true,
+
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Raphacure Patient",
+      projectDesc: "Your app description here...",
+
+      // ← ADD THIS
+      techStack: ["Flutter", "Dart", "Firebase", "GetX"],
+
+      // ← ADD THIS (your 3 phone screenshots)
+      mockups: [
+        require("./assets/images/mockup1.png"),
+        require("./assets/images/mockup2.png"),
+        require("./assets/images/mockup3.png"),
+      ],
+
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+        { name: "Playstore", url: "https://play.google.com/store/..." },
+        { name: "Appstore", url: "https://apps.apple.com/..." },
+      ],
     },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
   ],
-  display: true // Set false to hide this section, defaults to true
 };
+
+// const bigProjects = {
+//   title: "Big Projects",
+//   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+//   projects: [
+//     {
+//       image: require("./assets/images/saayaHealthLogo.webp"),
+//       projectName: "Saayahealth",
+//       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+//       footerLink: [
+//         {
+//           name: "Visit Website",
+//           url: "http://saayahealth.com/"
+//         }
+//         //  you can add extra buttons here.
+//       ]
+//     },
+//     {
+//       image: require("./assets/images/nextuLogo.webp"),
+//       projectName: "Nextu",
+//       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+//       footerLink: [
+//         {
+//           name: "Visit Website",
+//           url: "http://nextu.se/"
+//         }
+//       ]
+//     }
+//   ],
+//   display: true // Set false to hide this section, defaults to true
+// };
 
 // Achievement Section
 // Include certificates, talks etc
