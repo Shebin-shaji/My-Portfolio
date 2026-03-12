@@ -23,8 +23,9 @@ const greeting = {
   username: "Shebin Shaji",
   title: "Hi all, I'm Shebin",
   subTitle: emoji(
-    " A passionate Flutter Developer 🚀 having 1.5 years of experience building clean and scalable mobile applications using Flutter, Dart, and modern app architecture principles"
+    " A passionate Flutter Developer 🚀 having around 2 years of experience building clean and scalable mobile applications using Flutter, Dart, and modern app architecture principles"
   ),
+  //RESUMELINK ,DOWNLOAD MY RESUME
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
