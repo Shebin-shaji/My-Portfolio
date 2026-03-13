@@ -181,35 +181,38 @@
 /* ── RIGHT SIDE: Mockups ─────────────────────────────────── */
 .big-project-mockups {
   position: relative;
-  width: 420px;
+  width: 400px;
   height: 100%;
   flex-shrink: 0;
-  overflow: hidden;
-  /* phones stay strictly inside */
+  /* overflow visible so phones aren't clipped */
 }
 
 .mockup-img {
   position: absolute;
   object-fit: contain;
-  object-position: bottom;
+  object-position: center bottom;
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
   bottom: 0;
 }
 
-/* Left phone — tilted left, bottom-anchored */
+/* ── Phones are tightly clustered around the center of the container ── */
+/* All anchored at bottom: 0, side phones tilt inward toward center    */
+
+/* Left phone — tilted inward (clockwise), tucked behind center */
 .mockup-0 {
-  width: 165px;
-  height: 95%;
-  left: 0px;
+  width: 155px;
+  height: 92%;
+  left: 50%;
+  margin-left: -160px;   /* pull left of center */
   bottom: 0;
-  transform: rotate(-5deg);
+  transform: rotate(-8deg);
   transform-origin: bottom center;
   z-index: 1;
 }
 
 /* Center phone — upright, tallest, front */
 .mockup-1 {
-  width: 185px;
+  width: 175px;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -217,13 +220,14 @@
   z-index: 3;
 }
 
-/* Right phone — tilted right, bottom-anchored */
+/* Right phone — tilted inward (counter-clockwise), tucked behind center */
 .mockup-2 {
-  width: 165px;
-  height: 95%;
-  right: 0px;
+  width: 155px;
+  height: 92%;
+  left: 50%;
+  margin-left: 20px;     /* push right of center */
   bottom: 0;
-  transform: rotate(5deg);
+  transform: rotate(8deg);
   transform-origin: bottom center;
   z-index: 1;
 }
@@ -249,17 +253,19 @@
   }
 
   .mockup-0 {
-    width: 120px;
+    width: 110px;
     height: auto;
+    margin-left: -115px;
   }
 
   .mockup-1 {
-    width: 135px;
+    width: 125px;
     height: auto;
   }
 
   .mockup-2 {
-    width: 120px;
+    width: 110px;
     height: auto;
+    margin-left: 15px;
   }
 }
