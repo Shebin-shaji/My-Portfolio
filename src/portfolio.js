@@ -253,7 +253,7 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "Some startups and companies that I helped to create their tech",
+  // subtitle: "Some startups and companies that I helped to create their tech",
   display: true,
 
   projects: [
@@ -262,7 +262,7 @@ const bigProjects = {
       projectDesc: "Your app description here...",
 
       // ← ADD THIS
-      techStack: ["Flutter", "Dart", "Firebase", "GetX"],
+      techStack: ["Flutter", "Dart", "Provider", "MVVM"],
 
       // ← ADD THIS (your 3 phone screenshots)
       mockups: [

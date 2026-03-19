@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 40px;
   margin-top: 32px;
+  bottom: -32px;
 }
 
 /* ── Card ───────────────────────────────────────────────── */
@@ -18,28 +19,19 @@
 
   background: #222962;
   border-radius: 49px;
-  padding: 0px 50px;
-  height: 421px;
-  /* ← FIXED HEIGHT — change this number to resize */
+  padding: 10px 50px;
   overflow: hidden;
 }
 
 /* ══════════════════════════════════════════════════════════
    LEFT COLUMN
-   Think of this like Flutter's Column() widget:
-     mainAxisAlignment: MainAxisAlignment.center
-     crossAxisAlignment: CrossAxisAlignment.start
    ══════════════════════════════════════════════════════════ */
 .big-project-left {
   display: flex;
   flex-direction: column;
-  /* vertical stack — like Column() */
   align-items: flex-start;
-  /* like crossAxisAlignment: start */
   justify-content: center;
-  /* like mainAxisAlignment: center */
   gap: 18px;
-  /* like SizedBox(height: 18) between children */
   max-width: 572px;
   z-index: 1;
 }
@@ -73,14 +65,12 @@
 }
 
 /* ── Child 3: Tech Used block ───────────────────────────── */
-/* Like a nested Column with gap: 6px */
 .big-project-tech {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-/* "Tech Used" label */
 .tech-label {
   font-family: "Outfit", sans-serif;
   font-weight: 600;
@@ -92,8 +82,6 @@
   color: #ffffff;
 }
 
-/* Tech items row: FLUTTER | DART | ... */
-/* Like Flutter Row() */
 .tech-list {
   display: flex;
   flex-direction: row;
@@ -117,7 +105,6 @@
   }
 }
 
-/* The "|" pipe divider between tech names */
 .tech-divider {
   display: inline-block;
   width: 1px;
@@ -128,7 +115,6 @@
 }
 
 /* ── Child 4: Buttons row ───────────────────────────────── */
-/* Like Flutter Row with MainAxisAlignment.start */
 .big-project-buttons {
   display: flex;
   flex-direction: row;
@@ -166,70 +152,71 @@
   }
 }
 
-/* Playstore — black bg, white text */
 .cta-dark {
   background: #000000;
   color: #ffffff;
 }
 
-/* Appstore — white bg, navy text */
 .cta-light {
   background: #ffffff;
   color: #252b61;
 }
 
-/* ── RIGHT SIDE: Mockups ─────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   RIGHT SIDE: Mockups
+   — card is 421px tall
+   — center phone: 390px, upright, tallest
+   — left phone:   300px, rotated -8deg, behind
+   — right phone:  320px, rotated +6deg, middle layer
+   — all pinned to bottom: 0
+   ══════════════════════════════════════════════════════════ */
 .big-project-mockups {
   position: relative;
-  width: 400px;
-  height: 100%;
+  width: 430px;
+  height: 421px;
   flex-shrink: 0;
-  /* overflow visible so phones aren't clipped */
+  overflow: visible;
+  margin-bottom: -45px;
 }
 
 .mockup-img {
   position: absolute;
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.35));
   bottom: 0;
 }
 
-/* ── Phones are tightly clustered around the center of the container ── */
-/* All anchored at bottom: 0, side phones tilt inward toward center    */
-
-/* Left phone — tilted inward (clockwise), tucked behind center */
+/* Left phone — shorter, tilted left, behind */
 .mockup-0 {
-  width: 155px;
-  height: 92%;
-  left: 50%;
-  margin-left: -160px;   /* pull left of center */
+  width: 150px;
+  height: 300px;
+  left: 10px;
   bottom: 0;
+  z-index: 1;
   transform: rotate(-8deg);
   transform-origin: bottom center;
-  z-index: 1;
 }
 
-/* Center phone — upright, tallest, front */
+/* Center phone — tallest, upright, front */
 .mockup-1 {
-  width: 175px;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 180px;
+  height: 390px;
+  left: 125px;
   bottom: 0;
   z-index: 3;
+  transform: none;
 }
 
-/* Right phone — tilted inward (counter-clockwise), tucked behind center */
+/* Right phone — mid height, tilted right, middle */
 .mockup-2 {
-  width: 155px;
-  height: 92%;
-  left: 50%;
-  margin-left: 20px;     /* push right of center */
+  width: 150px;
+  height: 320px;
+  left: 260px;
   bottom: 0;
-  transform: rotate(8deg);
+  z-index: 2;
+  transform: rotate(6deg);
   transform-origin: bottom center;
-  z-index: 1;
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
@@ -248,24 +235,25 @@
 
   .big-project-mockups {
     width: 100%;
-    height: 280px;
+    height: 300px;
     margin-top: 24px;
   }
 
   .mockup-0 {
     width: 110px;
-    height: auto;
-    margin-left: -115px;
+    height: 210px;
+    left: 10px;
   }
 
   .mockup-1 {
-    width: 125px;
-    height: auto;
+    width: 130px;
+    height: 280px;
+    left: 95px;
   }
 
   .mockup-2 {
     width: 110px;
-    height: auto;
-    margin-left: 15px;
+    height: 230px;
+    left: 195px;
   }
 }
